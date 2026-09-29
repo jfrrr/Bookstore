@@ -88,10 +88,6 @@
                             <span class="material-symbols-outlined">add_shopping_cart</span>
                             Tambah ke Keranjang
                         </button>
-                        <a href="{{ route('cart.index') }}"
-                           class="flex items-center gap-2 border border-[#8d4b00] text-[#8d4b00] font-semibold px-5 py-3 rounded-xl hover:bg-[#8d4b00] hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                        </a>
                     </form>
                 @else
                     <div class="mb-8">

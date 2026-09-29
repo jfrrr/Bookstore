@@ -81,15 +81,15 @@ class AdminManagementTest extends TestCase
             'status'  => 'pending',
         ]);
 
-        // Transition from pending -> confirmed
+        // Transition from pending -> delivered (Selesai)
         $response = $this->actingAs($admin)->patch("/admin/orders/{$order->id}", [
-            'status' => 'confirmed',
+            'status' => 'delivered',
         ]);
 
         $response->assertRedirect();
         $this->assertDatabaseHas('orders', [
             'id'     => $order->id,
-            'status' => 'confirmed',
+            'status' => 'delivered',
         ]);
     }
 }

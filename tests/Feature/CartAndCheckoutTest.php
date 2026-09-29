@@ -111,8 +111,7 @@ class CartAndCheckoutTest extends TestCase
         $response = $this->actingAs($user)->get("/orders/{$order->id}");
         $response->assertStatus(200);
         $response->assertSee('ORD-20260919-TEST');
-        $response->assertSee('Sedang Diproses');
-        $response->assertSee('Status Progres Pengiriman');
+        $response->assertSee('Belum Selesai');
     }
 
     public function test_user_cannot_view_another_users_order(): void

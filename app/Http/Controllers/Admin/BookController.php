@@ -18,7 +18,7 @@ class BookController extends Controller
 {
     public function index(Request $request): View
     {
-        $query = Book::with('category')->withTrashed();
+        $query = Book::with('category');
 
         if ($search = $request->input('search')) {
             $query->where(function ($q) use ($search) {
